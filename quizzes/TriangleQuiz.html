@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do you know your Triangles?</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/0ae1aebe6f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <p id="nav_brand">Fun with triangles</p>
+        <a href="../index.html">Home</a>
+        <a href="./TriangleQuiz.html">Triangle Quiz</a>
+        <a href="./AreaOfTriangle.html">Area of Triangle</a>
+        <a href="./FindHypotenuse.html">Find Hypotenuse</a>
+        <a href="./CheckIsTriangle.html">Is it Triangle?</a>
+    </nav>
+    <div class="quiz">
+        <div class="title">
+            Triangle quiz time!
+        </div>
+        <form class="quiz-form">
+            <div class="question-container">
+                <p>1. What type of triangle is Δ ABC, where AB = AC = BC = 10 cm? </p>
+                <label><input type="radio" name="question-1" value="Equilateral" id="option-1"/>Equilateral</label>
+                <label><input type="radio" name="question-1" value="Isosceles" id="option-2"/>Isosceles</label>
+                <label><input type="radio" name="question-1" value="Scalene" id="option-3"/>Scalene</label>
+            </div>
+            <div class="question-container">
+                <p>2. The perimeter of scalene triangle with sides a, b, c is</p>
+                <label><input type="radio" name="question-2" value="a + b + c" id="option-1"/>a + b + c</label>
+                <label><input type="radio" name="question-2" value="2a" id="option-2"/>2a</label>
+                <label><input type="radio" name="question-2" value="None of these" id="option-3"/>None of these</label>
+            </div>
+            <div class="question-container">
+                <p>
+                    3. A triangle has angle measurements of 90°, 40°, and 50°. What type of triangle is this?</p>
+                <label><input type="radio" name="question-3" value="Acute" id="option-1"/>Acute</label>
+                <label><input type="radio" name="question-3" value="Right" id="option-2"/>Right</label>
+                <label><input type="radio" name="question-3" value="Obtuse" id="option-3"/>Obtuse</label>
+            </div>
+            <div class="question-container">
+                <p>4. A scalene triangle has ___ lines of symmetry </p>
+                <label><input type="radio" name="question-4" value="Two" id="option-1"/>Two</label>
+                <label><input type="radio" name="question-4" value="No" id="option-2"/>No</label>
+                <label><input type="radio" name="question-4" value="15" id="option-3"/>15</label>
+            </div>
+            <div class="question-container">
+                <p>5. There is a right triangle PQR where: angle Q = 90°; angle P = angle R. What is the measure of angles P and R?
+                </p>
+                <label><input type="radio" name="question-5" value="85°" id="option-1"/>85°</label>
+                <label><input type="radio" name="question-5" value="65°" id="option-2"/>65°</label>
+                <label><input type="radio" name="question-5" value="45°" id="option-3"/>45°</label>
+            </div>
+            <div class="message">&nbsp;</div>
+            <button type="submit" id="retry-btn">Retry</button>
+        </form>
+        <button id="submit-btn">Submit</button>
+    </div>
+    <div class="bottom-container">
+        <div class="icons">
+          <a class="footer-link" target="_blank" href=" https://twitter.com/erkaustubhjoshi"><i
+              class="fab fa-twitter fa-2x"></i></a>
+
+          <a class="footer-link" target="_blank" href="https://github.com/kaustubh-joshi1"><i
+              class="fab fa-github fa-2x"></i></a>
+
+           <a class="footer-link" target="_blank" href=" https://www.linkedin.com/in/kaustubh-joshi-88173b224/"><i
+              class="fab fa-linkedin fa-2x"></i></a>
+
+        </div>
+        <p class="copyright">© 2021 Kaustubh Joshi</p>
+    </div>
+    <script src="./TriangleQuiz.js"></script>
+</body>
+</html>
