@@ -1,36 +1,38 @@
-var quizForm = document.querySelector(".quiz-form");
-var checkBtn = document.querySelector("#submit-btn");
+let quizform = document.querySelector(".quiz-form")
+let btn = document.querySelector("#submit-btn")
 var retryBtn = document.querySelector("#retry-btn")
-var output = document.querySelector(".message");
-var quizAnswers = ["Equilateral", "a + b + c", "Right", "No", "45°"];
 
-function compareAnswers(quizResults){
-    let score = 0, index = 0;
-    for (let answer of quizResults ){
+let output = document.querySelector(".message")
+let correctAnswers = ["Equilateral", "a + b + c", "Right", "No", "45°"];
 
-        if(quizAnswers.includes(answer)){
-            score++;
+
+function calculateScore() {
+    let index = 0;
+    let score = 0;
+    let check = 0;
+    const formResults = new FormData(quizform);
+
+    for (let value of formResults.values()) {
+        
+        if (value === correctAnswers[index]) {
+            score = score + 1;
         }
-        index++;
+        index = index + 1;
+        check = check + 1;
     }
-
-    if(score > 2){
-        showMessage(`Your score is: ${score}.`)
+    if (check === 5) {
+        showMessage( "Your score in Quiz is => " + score);
     } else {
-        showMessage(`Your score is: ${score}.`)
+        showMessage('Please enter all Values');
     }
-}
-
-function getResult(){
-    const quizResults = new FormData(quizForm);
-    compareAnswers(quizResults.values())
 }
 
 function showMessage(message){
     output.innerText = message;
-    checkBtn.style.display = "none";
+    btn.style.display = "none";
     retryBtn.style.display = "block"
 }
 
 retryBtn.style.display = "none";
-checkBtn.addEventListener("click", getResult);
+btn.addEventListener('click', calculateScore)
+
